@@ -1,0 +1,11 @@
+# Código e documentação com finais de linha consistentes
+* text=auto eol=lf
+*.ps1 text eol=crlf
+
+# Artefatos intencionais, sem conversão de texto
+*.pptx binary
+*.npz binary
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary

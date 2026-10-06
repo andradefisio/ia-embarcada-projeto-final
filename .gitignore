@@ -1,68 +1,69 @@
-# Prerequisites
-*.d
+# Materiais e configuracao privados desta maquina
+/.local/
+/.presentation-build/
+.env
+.env.*
+!.env.example
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Python e ferramentas instaladas localmente
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Download do dataset e entradas C derivadas
+/dataset/*
+!/dataset/README.md
+/main/generated/test_data.h
 
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
+# ESP-IDF: build e configuracao gerada
+/build/
+/build-*/
+/Build/
+/managed_components/
+/sdkconfig
+/sdkconfig.old
+/sdkconfig.*.old
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
-Makefile
-install_manifest.txt
 compile_commands.json
 
-# Temporary files
-*.tmp
+# Pacotes de entrega e caminhos locais antigos
+/dist/
+/artifacts/
+/build-tools/
+
+# Arquivos compilados
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.elf
+*.bin
+*.map
+*.d
+*.pdb
+*.ilk
+
+# Videos da aula, logs e temporarios do editor/Office
+*.mp4
 *.log
+*.tmp
 *.bak
 *.swp
+~$*
+.DS_Store
+Thumbs.db
 
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# VS Code: somente configuracao compartilhavel
+/.vscode/*
+!/.vscode/tasks.json
+!/.vscode/extensions.json
