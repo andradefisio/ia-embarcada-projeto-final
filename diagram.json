@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Projeto final - IA Aplicada",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": { "flashSize": "4" } },
+    { "type": "wokwi-pushbutton", "id": "demo", "top": 0, "left": 220, "attrs": { "color": "blue", "label": "DEMO" } },
+    { "type": "wokwi-pushbutton", "id": "test", "top": 100, "left": 220, "attrs": { "color": "green", "label": "TESTE COMPLETO" } },
+    { "type": "wokwi-led", "id": "ok", "top": 220, "left": 210, "attrs": { "color": "green", "label": "ACERTO" } },
+    { "type": "wokwi-led", "id": "error", "top": 220, "left": 310, "attrs": { "color": "red", "label": "ERRO" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 275, "left": 200, "attrs": { "value": "330" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 315, "left": 300, "attrs": { "value": "330" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:4", "demo:1.l", "blue", [] ],
+    [ "demo:2.l", "esp:GND.1", "black", [] ],
+    [ "esp:5", "test:1.l", "green", [] ],
+    [ "test:2.l", "esp:GND.1", "black", [] ],
+    [ "esp:6", "r1:1", "green", [] ],
+    [ "r1:2", "ok:A", "green", [] ],
+    [ "ok:C", "esp:GND.1", "black", [] ],
+    [ "esp:7", "r2:1", "red", [] ],
+    [ "r2:2", "error:A", "red", [] ],
+    [ "error:C", "esp:GND.1", "black", [] ]
+  ]
+}
