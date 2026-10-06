@@ -14,7 +14,7 @@
 ├── requirements.txt
 ├── sdkconfig.defaults
 ├── wokwi.toml
-├── apresentacao/       PowerPoint final, editável
+├── apresentacao/       Apresentação final em PDF
 ├── dataset/README.md   Instruções para baixar os dados
 ├── docs/              Descrição original, relatório, roteiro e validação
 ├── main/              Firmware e núcleo de inferência
@@ -24,7 +24,7 @@
 └── scripts/           Treino, exportação, verificação, build, relatório e pacote
 ```
 
-Mantenho os modelos treinados e o header de pesos porque são pequenos e permitem usar o resultado do trabalho sem refazer o treinamento. Mantenho o PowerPoint final porque faz parte da entrega acadêmica. Os resultados resumidos documentam a avaliação.
+Mantenho os modelos treinados e o header de pesos porque são pequenos e permitem usar o resultado do trabalho sem refazer o treinamento. Publico a apresentação em PDF e mantenho o PowerPoint editável somente na minha máquina. Os resultados resumidos documentam a avaliação.
 
 O arquivo de previsões contém apenas índices, identificadores de participantes do dataset e rótulos. Não replica as características do dataset.
 
@@ -33,6 +33,7 @@ O arquivo de previsões contém apenas índices, identificadores de participante
 | Caminho | Motivo |
 |---|---|
 | `.local/` | Ferramentas instaladas, logs, vídeo da aula, fontes e rascunhos da criação do PowerPoint |
+| `*.pptx` | Apresentações editáveis mantidas somente na máquina local |
 | `dataset/*.zip` | Download externo, reproduzível pela fonte oficial |
 | `main/generated/test_data.h` | Quase 7 MB de dados derivados do teste, regeneráveis sem treinamento |
 | `build/` | Objetos, ELF, binários, CMake e imagem completa gerados pelo ESP-IDF |

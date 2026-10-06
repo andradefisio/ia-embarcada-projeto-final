@@ -102,7 +102,7 @@ O tempo impresso no Wokwi é do ambiente simulado, não um benchmark de uma plac
 
 - [Roteiro de 10 minutos](docs/roteiro-apresentacao.md), em primeira pessoa.
 - [Relatório de resultados](docs/resultados.md), com matriz de confusão.
-- [PowerPoint da apresentação](apresentacao/IA_Aplicada_HAR_ESP32S3.pptx), com notas e tempos por slide.
+- [Apresentação em PDF](apresentacao/IA_Aplicada_HAR_ESP32S3.pdf). O PowerPoint editável, com notas e tempos por slide, permanece apenas na minha máquina.
 - `scripts/train.py`: treino, quantização e exportação.
 - `main/har_inference.h`: inferência inteira.
 - `main/main.c`: aplicação embarcada, avaliação e LEDs.
@@ -111,7 +111,7 @@ O tempo impresso no Wokwi é do ambiente simulado, não um benchmark de uma plac
 - `results/`: métricas, previsões e evidência da verificação C.
 - [Organização e política de versionamento](docs/organizacao-repositorio.md).
 
-Para gerar uma entrega com fontes, PowerPoint e firmware compilado, executo `python scripts/package.py`. O ZIP fica em `dist/`, fora do versionamento. Arquivos privados de `.local/` não entram nesse pacote.
+Para gerar uma entrega com fontes, apresentação em PDF e firmware compilado, executo `python scripts/package.py`. O ZIP fica em `dist/`, fora do versionamento. Arquivos privados de `.local/` e apresentações `.pptx` não entram nesse pacote.
 
 ## Limitações
 
