@@ -98,21 +98,6 @@ No navegador, use um projeto ESP32-S3 com este `diagram.json` e **Upload Firmwar
 
 O tempo impresso no Wokwi é do ambiente simulado, não um benchmark de uma placa física.
 
-## Material para apresentação
-
-- [Roteiro de 10 minutos](docs/roteiro-apresentacao.md), em primeira pessoa.
-- [Relatório de resultados](docs/resultados.md), com matriz de confusão.
-- [Apresentação em PDF](apresentacao/IA_Aplicada_HAR_ESP32S3.pdf). O PowerPoint editável, com notas e tempos por slide, permanece apenas na minha máquina.
-- `scripts/train.py`: treino, quantização e exportação.
-- `main/har_inference.h`: inferência inteira.
-- `main/main.c`: aplicação embarcada, avaliação e LEDs.
-- `main/generated/model_data.h`: pesos exportados para o firmware.
-- `models/`: modelos treinados float32 e quantizado.
-- `results/`: métricas, previsões e evidência da verificação C.
-- [Organização e política de versionamento](docs/organizacao-repositorio.md).
-
-Para gerar uma entrega com fontes, apresentação em PDF e firmware compilado, executo `python scripts/package.py`. O ZIP fica em `dist/`, fora do versionamento. Arquivos privados de `.local/` e apresentações `.pptx` não entram nesse pacote.
-
 ## Limitações
 
 O dataset usa adultos com smartphone na cintura; outra posição de sensor ou população pode alterar o desempenho. O modelo sempre escolhe uma das seis classes, sem rejeição de atividades desconhecidas. Não considero esta aplicação um sistema clínico validado. Como próximos passos, implementaria aquisição e extração das características, ou treinaria um modelo para janelas inerciais, e mediria RAM, latência e energia na placa física.
